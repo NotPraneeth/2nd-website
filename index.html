@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> PRANEETH | Web developer </title>
+        <link rel="stylesheet" type="text/css" href="w3styles.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Praneeth()</a>
+            <ul>
+                <li><a href="https://notpraneeth.github.io/" class="active"> Home() </a></li>
+                <li><a href="#aboutmetitle"> About() </a></li>
+                <li><a href="#contactpageend"> Contact() </a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars" class="secobj">
+            <img src="moon.png" id="moon" class="secmoon">
+            <img src="mountains_behind.png" id="mountains_behind" class="secmount">
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="aboutbg">
+            <video autoplay muted loop id="vidabout" data-aos="zoom-out">
+                <source src="kurzgesagt.mp4" type="video/mp4">
+            </video>
+        </div>
+         <div class="about">
+            <h2 id="aboutmetitle" data-aos="slide-down" ease-in data-aos-offset="75"> About Me</h2>
+            <p id="aboutmecontent" data-aos="zoom-out" ease-in>Hello! I'm Praneeth and I am passionate about my work. Because I love what I do, I have a steady source of motivation that drives me to do my best. This passion leads me to challenge myself daily and learn new skills that help me do better work. I am a web-developer who believes in the magical realm of web-developing and the spells you can cast upon your user through the website, every website has a story to tell and i'm here to tell the story and hopefully connect with my user so that the both of us can get the most out of the website.<br><i>"I also happen to be a panda."</i></p>
+            <ul class="socials" data-aos="zoom-out" data-aos-offset="50" ease-in>
+                <li class="icons"><a href="https://github.com/NotPraneeth" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li class="icons"><a href="https://www.linkedin.com/in/notpraneeth/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li class="icons"><a href="https://www.instagram.com/rsphmm/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+        
+        </div>
+        <div class="contactcontainer" id="contactpageend">
+            <div ><h1 class="talklol" id="contact" data-aos="slide-up" ease-in >CONTACT</h1></div>
+            <div class="lastpar" data-aos="slide-up" ease-in>
+                <p ><i>Hello there! if you'd like to get in touch, you can contact me through gmail on rsphaha@gmail.com, or text me on my socials mentioned above. i'm excited to work on more projects. Also, dont click on the play button at the side, just dont.<br>P.S: i'm definitely not a workaholic, shh. </i></p>
+            </div>
+            <div class="illustration">
+                <img src="Music Raw Files/music file2-04.svg" id="musicsvg" data-aos="fade-in" data-aos-duration="4000">
+                <i class="fa fa-play-circle" id="playbutton" id="playbutton"></i>
+            </div>
+        </div>
+        <audio id="lofi">
+            <source src="Music Raw Files/Idealism-controlla.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var lofisong= document.getElementById("lofi");
+            var play= document.getElementById("playbutton");
+
+            play.onclick = function(){
+                if(lofisong.paused){
+                    lofisong.play();
+                    document.getElementById("playbutton").className = "fa fa-pause-circle"
+                }
+                else{
+                    lofisong.pause();
+                    document.getElementById("playbutton").className = "fa fa-play-circle"
+                }
+            }
+        </script>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind= document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let mountains_front= document.getElementById('mountains_front');
+            let header= document.querySelector('header');
+            let credits= document.getElementById("talk");
+            let talklol = document.getElementById("contact");
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                stars.style.left= value*0.7 + 'px'
+                moon.style.top= value*3.05 + 'px';
+                mountains_behind.style.top= value*0.5 + 'px';
+                mountains_front.style.top=value*0 + 'px';
+                header.style.top= value*0.5 + 'px';
+            })
+         </script>
+         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script>
+
+
+
+
+         <script>
+             const micron = require('webkul-micron');
+             </script>
+       
+         <script>
+            AOS.init({
+                offset: 100,
+                duration: 2000,
+            });
+            </script>
+        
+            
+    </body>
+</html>

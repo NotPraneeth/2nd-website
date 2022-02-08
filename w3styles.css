@@ -5,6 +5,8 @@
     box-sizing: border-box;
     font-family: 'Source Code Pro', sans-serif;
     scroll-behavior: smooth;
+    max-width: 100%;
+    max-height: 100%;
 }
 body{
     min-height: 100vh;
@@ -56,6 +58,24 @@ header ul li a:hover, header ul li a .active{
     background:#fff;
     color: #2b1055;
     letter-spacing:2px;
+}
+
+@media only screen and (max-width: 800px){
+    header ul li{
+        margin-left: 25px;
+    }
+    header ul li a{
+        font-size: 1em;
+    }
+
+    header .logo{
+        font-size: 1.25em;
+        display: none;
+    }
+    header{
+        width: 50%;
+    }
+    
 }
 section{
     position:relative;
@@ -141,6 +161,17 @@ section img#mountains_front{
     height: 100vh;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 800px){
+    .aboutbg{
+        display: none;
+    }
+    .about{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
 #aboutmecontent{
     margin-top: 7%;
 }
@@ -156,6 +187,13 @@ section img#mountains_front{
     border-radius: 10px;
     padding: 20px 20px;
     transition: 0.5s;
+}
+@media only screen and (max-width: 800px){
+    .socials{
+        font-size: 1.5em;
+        margin-top: 4vh;
+        padding: 15px 15px;
+    }
 }
 .icons{
     color: white;
@@ -213,42 +251,43 @@ section img#mountains_front{
     top: 70%;
 }
 .talklol{
-    display: inline-block;
-    white-space: nowrap;
-    width: 53%;
-    font-size: 10em;
+    width: 100%;
+    font-size: 7em;
     color: #fff;
     font-weight: 600;
     opacity: 0.6;
     position: absolute;
-    overflow: hidden;
     line-height: 30vh;
     letter-spacing: 20px;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
+
 .lastpar{
     position: absolute;
     display: flex;
     flex-basis: 10%;
     color: #fff;
-    width:50%;
-    left: 35%;
+    width:85%;
+    left: 10%;
     top: 40%;
-
 }
 .lastpar p{
     font-family: 'Space Mono',sans-serif;
-    font-size: 1.5em;
+    font-size: 22px;
     box-sizing: content-box;
 }
 
-@media only screen and (max-width: 600px){
-    .socials{
-        background: #000;
+@media only screen and (max-width: 800px){
+    .lastpar p{
+        font-size: 18px;
     }
-    
 }
+@media only screen and (max-width: 800px){
+    #musicsvg{
+        display: none;
+    }
+}
+
+
 
 
 
